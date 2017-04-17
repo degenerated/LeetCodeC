@@ -13,9 +13,9 @@ struct Interval {
 	Interval(int s, int e) : start(s), end(e) {}
 };
 
+bool acompare(Interval l1, Interval l2) { return l1.start < l2.start; }
 class Solution {
 public:
-	bool acompare(Interval l1, Interval l2) { return l1.start < l2.start; }
 	vector<Interval> merge(vector<Interval>& intervals) {
 		vector<Interval> res;
 		int size = intervals.size();
